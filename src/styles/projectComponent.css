@@ -1,0 +1,79 @@
+.projectcomponent-container {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    border-radius: 20px;
+    height: 540px;
+    padding: 5px;
+    background-color: var(--backgroundColor);
+}
+
+.projectcomponent-image {
+    width: 100%;
+    height: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+.projectcomponent-image img {
+    border-radius: 20px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.projectcomponent-info>h3 {
+    margin-top: 0;
+    background: linear-gradient(90deg, #005BC4 0%, #2196F3 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 0 0 20px rgba(0, 91, 196, 0.3);
+}
+
+.projectcomponent-info {
+    display: flex;
+    padding: 20px;
+    flex-direction: column;
+}
+
+.projectcomponent-info>p {
+    margin: 0;
+    color: #9CA3AF;
+}
+
+.projectcomponent-tech-container {
+    display: flex;
+    margin-top: 15px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.projectcomponent-tech {
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    color: #e5e7eb;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 2px 2px rgba(112, 103, 103, 0.5),
+        0 0 0 1px rgb(64, 55, 55);
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.projectcomponent-button {
+    display: flex;
+    padding: 10px;
+    width: 30%;
+    border-radius: 10px;
+    margin-top: 10px;
+    background: linear-gradient(135deg, #1e1b4b, #2e1065);
+    color: #ddd6fe;
+    border: 1px solid rgba(168, 85, 247, 0.25);
+    cursor: pointer;
+    justify-content: center;
+    align-items:center;
+}
+.projectcomponent-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 2px 2px 5px rgb(63, 51, 51);
+}
+

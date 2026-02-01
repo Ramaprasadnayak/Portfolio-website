@@ -1,0 +1,17 @@
+.resumepage {
+    display: flex;
+    justify-content: center;
+    backdrop-filter: blur(6px);
+}
+
+.resumepage>section {
+    margin: 20px;
+    width: 80%;
+    height: 100%;
+    padding: 40px;
+    border-radius:30px;
+    background-color: rgb(24 24 24);
+}
+.resumepage>section >h2{
+    color:white;
+}

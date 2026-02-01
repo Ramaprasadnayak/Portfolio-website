@@ -1,0 +1,59 @@
+/* drawer button */
+.mydrawer {
+    display: none;
+}
+
+.drawer {
+    width: 300px;
+    height: 100vh;    
+    background-color: var(--backgroundColor);
+    position: fixed;
+    box-shadow:
+        1px 1px 1px rgb(0, 0, 0),
+        1px 1px 1px rgb(119, 108, 108);
+    left: -320px;
+    top: 0;
+    transition: left 0.3s ease;
+    z-index: 2;
+}
+
+.drawer.open {
+    left: 0;
+}
+
+.drawer-btn {
+    font-size: 24px;
+    background: none;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.drawer-btn:hover {
+    color: aqua;
+}
+
+.options {
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    cursor: pointer;
+    color: white;
+}
+
+.options:hover {
+    color: #a855f7;
+}
+
+.sets {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10%;
+}
+
+@media (max-width:768px) {
+    .mydrawer {
+        display: inline;
+    }
+}

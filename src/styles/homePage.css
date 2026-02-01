@@ -1,0 +1,184 @@
+.homepage-container {
+    display: flex;
+    min-height: calc(100vh - var(--navbarheight));
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+}
+
+.homepage-avatar-container {
+    animation: floatUpDown 2s ease-in-out infinite;
+}
+
+.homepage-avatar {
+    height: 300px;
+    width: 300px;
+    background-image: url("../assets/ramprasad.jpeg");
+    background-size: cover;
+    background-position: start;
+    border-radius: 50%;
+    box-shadow: 1px 1px 200px rgb(59, 98, 98);
+    opacity: 0;
+    transform: translateX(-40px);
+    animation: slideIn 2.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+.homepage-userinfo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 60px;
+    animation: slideIn 2.3s cubic-bezier(0.25, 0.46, 0.45, 0.94)backwards;
+}
+
+.homepage-heading {
+    display: flex;
+    flex-direction: column;
+}
+
+.homepage-userinfo>div>h1 {
+    color: white;
+    text-align: left;
+    opacity: 0;
+    transform: translateX(40px);
+    animation: slideIn 2.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+.homepage-userinfo span {
+    background: linear-gradient(90deg, #005BC4 0%, #2196F3 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 0 0 20px rgba(0, 91, 196, 0.3);
+}
+
+.typing {
+    width: max-content;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 2px solid;
+    animation:
+        typing 2.5s steps(28, end),
+        blink 0.7s step-end infinite;
+}
+
+.homepage-skills,
+.homepage-info {
+    display: flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    justify-content: center;
+    gap: 15px;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1s ease forwards;
+    animation-delay: 1s;
+}
+
+.homepage-skills-container {
+    color: white;
+    padding: 5px;
+    background-color: #14161a;
+    border-radius: 50px;
+    box-shadow: 1px 1px 2px aqua,
+        -1px -1px 2px white;
+}
+
+.homepage-skills-container:hover {
+    box-shadow: 2px 2px 10px aqua,
+        -2px -2px 10px white;
+}
+
+.homepage-info-container {
+    background-color: #14161a;
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.homepage-info-container:hover {
+    transform: scale(1.1);
+}
+
+
+
+/* animations */
+@keyframes floatUpDown {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(6px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+@keyframes typing {
+    from {
+        clip-path: inset(0 100% 0 0);
+    }
+
+    to {
+        clip-path: inset(0 0 0 0);
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+
+/* mobile */
+@media (max-width:768px) {
+    .homepage-container {
+        gap:50px;
+        flex-direction: column;
+    }
+    .homepage-headding{
+        padding-left: 30px;
+    }
+    .homepage-info {
+        gap: 10px;
+        flex-direction: column;
+    }
+    .homepage-userinfo {
+        gap: 30px;
+    }
+    .typing {
+        white-space: normal;
+        border-right: none;
+        opacity: 0;
+        transform: translateX(40px);
+        animation: slideIn 2.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+        width: 100%;
+    }
+    .homepage-heading {
+        margin-left: 30px;
+    }
+    .homepage-avatar{
+        height: 250px;
+        width: 250px;
+        box-shadow: 10px 10px 200px rgb(59, 98, 98),
+        2px 2px 10px rgb(159, 249, 255);
+    }
+}

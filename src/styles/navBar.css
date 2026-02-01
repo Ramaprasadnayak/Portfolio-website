@@ -1,0 +1,104 @@
+.navbar-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--navbarBackground);
+    height: var(--navbarheight);
+}
+.navbar-username {
+    display: flex;
+    gap: 10px;
+    flex-direction: row;
+    margin-left: 50px;
+}
+.navbar-username-avatar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #14161a;
+    color: #00D2FF;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+}
+.navbar-username-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+}
+.navbar-username-info>h5,
+.navbar-username-info>p {
+    margin: 0;
+}
+.navbar-username-info>p {
+    font-size: small;
+    color: #9CA3AF;
+}
+.navbar-button-container {
+    display: flex;
+    gap: 10px;
+    margin-right: 130px;
+}
+.navbar-button {
+    border: none;
+    background-color: transparent;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+.navbar-button>p {
+    position: relative;
+    display: inline-block;
+}
+.navbar-button>p::before {
+    content: "";
+    position: absolute;
+    bottom: -7px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 3px;
+    width: 0;
+    background: linear-gradient(328deg, blue, purple);
+    transition: width 0.2s ease;
+}
+.navbar-button>p:hover::before {
+    width: 100%;
+}
+.navbar-button>p:hover,
+.navbar-button.active>p {
+    background: linear-gradient(328deg, blue, purple);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+.navbar-button.active>p::before {
+    content: "";
+    position: absolute;
+    bottom: -7px;
+    height: 3px;
+    width: 100%;
+    background: linear-gradient(328deg, blue, purple);
+}
+
+
+
+/* mobile */
+@media (max-width:768px) {
+    .navbar-button-container {
+        display: none;
+    }
+    .navbar-username{
+        display: none;
+    }
+    /* .navbar-username-avatar{
+        background: linear-gradient(135deg, #1E293B, #0F172A);
+        width: 60px;
+        height: 40px;
+        border-radius: 10px;
+    } */
+    .navbar-container {
+        justify-content: start;
+        margin-left: 10px;
+    }
+}

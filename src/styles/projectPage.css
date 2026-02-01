@@ -1,0 +1,35 @@
+.projectpage {
+    display: flex;
+    justify-content: center;
+    backdrop-filter: blur(6px);
+}
+
+.project-container {
+    margin: 20px;
+    width: 90%;
+    height: 100%;
+    padding: 40px;
+    border-radius:30px;
+    background-color: rgb(24 24 24);
+}
+
+.project-container>h1,
+.project-container>p {
+    color:white;
+}
+
+.project-list{
+    display: grid;
+    gap:10px;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 20px;
+}
+@media (max-width:768px) {
+    .project-list{
+        grid-template-columns: 1fr;
+        padding: 0;
+    }
+    .project-container{
+        padding:15px;
+    }
+}

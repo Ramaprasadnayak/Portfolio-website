@@ -1,0 +1,64 @@
+.skillspage{
+    display: flex;
+    justify-content: center;
+    backdrop-filter: blur(6px);
+}
+
+.skillpage-container{
+    margin: 20px;
+    width: 80%;
+    height: 100%;
+    padding: 40px;
+    border-radius:30px;
+    background-color: rgb(24 24 24);
+}
+
+.skillpage-skills{
+    display: flex;
+    color:white;
+    padding: 15px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    width: 100px;
+    box-shadow: 2px 2px 10px aqua,
+        -2px -2px 10px white;
+    border-radius: 50%;
+}
+.skillpage-skills > img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+
+
+
+.skillpage-row{
+    display: flex;
+    color: white;
+    flex-direction: column;
+}
+.skillpage-skills>h3{
+    margin: 0;
+}
+.skillpage-programming{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap:30px;
+}
+
+@media (max-width:768px){
+    .skillpage-skills{
+        height: 50px;
+        width: 50px;
+    }
+    .skillpage-skills > img{
+        height: 30px;
+        width: 30px;
+    }
+    .skillpage-skills>h3{
+        font-size: small;
+    }
+}
