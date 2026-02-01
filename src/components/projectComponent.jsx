@@ -1,4 +1,4 @@
-import "../styles/projectcomponent.css";
+import "../styles/pcomponent.css";
 import { MdCode } from "react-icons/md";
 
 export default function ProjectComponent({ name = "", img = null, info = "", tech = {} }) {
