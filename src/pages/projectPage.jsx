@@ -15,6 +15,7 @@ const projects=[
             tech2:"Firebase-Auth",
             tech3:"Firebase-FireStore"
         },
+        link:"https://github.com/Ramaprasadnayak/flutter-project/tree/main/chatterbro",
         info:"A real-time chat application built with Flutter, using Firebase Authentication for secure user login and Cloud Firestore for real-time messaging and data synchronization."
     },
     {
@@ -26,6 +27,7 @@ const projects=[
             tech3:"Express",
             tech4:"nodeJs"
         },
+        link:"https://github.com/Ramaprasadnayak/react-project/tree/main/dbms_project/electrohub",
         info:"Built ElectroHub, a full-featured e-commerce platform using modern web technologies. Implemented user authentication, dynamic product catalog, shopping cart, order management, and responsive UI for seamless online shopping across devices."
     },
     {
@@ -37,6 +39,7 @@ const projects=[
             tech3:"SpringBoot",
             tech4:"Docker",
         },
+        link:"",
         info:"Bus Tracker application using Flutter that allows users to view bus routes and track bus locations in real time. Focused on responsive UI design and efficient data handling for smooth performance."
     },
     {
@@ -49,6 +52,7 @@ const projects=[
             tech4:"NodeJs",
             tech5:"Docker",
         },
+        link:"https://github.com/Ramaprasadnayak/coders_club.git",
         info:"Developed a LeetCode-like coding practice web application using React, allowing users to browse problems, view descriptions, and track progress through an interactive UI."
     }
 ];
@@ -62,7 +66,7 @@ export default function Projects(){
                     {
                         projects.map(
                             (project,index)=>(
-                                <ProjectComponent key={index} name={project.name} img={project.img} info={project.info} tech={project.tech}/>
+                                <ProjectComponent key={index} name={project.name} img={project.img} info={project.info} tech={project.tech} link={project.link}/>
                             )
                         )
                     }

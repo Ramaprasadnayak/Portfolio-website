@@ -1,7 +1,7 @@
 import "../styles/pcomponent.css";
 import { MdCode } from "react-icons/md";
 
-export default function ProjectComponent({ name = "", img = null, info = "", tech = {} }) {
+export default function ProjectComponent({ name = "", img = null, info = "", tech = {},link="" }) {
     return (
         <div className="projectcomponent-container">
             <div className="projectcomponent-image">
@@ -22,7 +22,7 @@ export default function ProjectComponent({ name = "", img = null, info = "", tec
                     }
                 </div>
                 <div style={{display:"flex",justifyContent:"end"}}>
-                    <button className="projectcomponent-button"><MdCode/>code</button>
+                    <button className="projectcomponent-button" onClick={() => window.open(link, "_blank")}><MdCode/>code</button>
                 </div>
             </div>
         </div>
