@@ -1,23 +1,25 @@
 import "../styles/certificate.css";
-
+import angular from "../assets/certificates/angular.png";
+import hackseek from "../assets/certificates/hackandseek.png";
+import datascience from "../assets/certificates/datascience.png";
 const certificates = [
   {
     id: 1,
     title: "Angular Workshop",
     org: "Web Development Training",
-    image: "src/assets/certificates/angular.png",
+    image: angular,
   },
   {
     id: 2,
     title: "Hack & seek",
     org: "Event",
-    image: "src/assets/certificates/hackandseek.png",
+    image: hackseek,
   },
   {
     id:3,
     title:"Job ready data Science",
     org:"Data Science",
-    image:"src/assets/certificates/datascience.png"
+    image: datascience
   }
 ];
 
